@@ -1,0 +1,52 @@
+POCOY(1)                    General Commands Manual                   POCOY(1)
+
+
+
+NAME
+       pocoy - window management tool
+
+SYNOPSIS
+       pocoy [-v] [-h] [-c]
+
+DESCRIPTION
+       pocoy  is  a  window stack management tool to add tiling and navigation
+       features from dwm to the DE of choice
+
+OPTIONS
+       -v     print version
+
+       -h     print help message
+
+       -c     print internal state file path
+
+COMMANDS
+       zoom   Toogle selected and master window positions
+
+       layout [none|last|M|T|C|c|@|D|F]
+              Set a layout: monocle M, tile  T,  centeredmaster  C,  centered‐
+              floatingmaster c, spiral @, dwindle D, flow F
+
+       mfact <increment>
+              Increase/decrease master area size
+
+       pushstack <number>
+              Push active window x positions in the stack
+
+       focusstack <number>
+              Focus the window x positions up or down in the stack
+
+       incnmaster <increment>
+              Increment/decrement the number of windows in the master area
+
+       gap inner <number>
+              Add a number of pixels around each window
+
+       gap outer <number>
+              Add a number of pixels around the layout area
+
+       decoration toogle
+              Toogle window decorations on and offf
+
+
+
+0.4.7                             2022-11-20                          POCOY(1)

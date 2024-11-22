@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+import sys
+import getopt
+
+try:
+	options, arguments = getopt.getopt(sys.argv[1:], shortopts='vhc', longopts=['version', 'help', 'cache'])
+except getopt.error as err:
+	print(str(err))
+	sys.exit(1)
+
+if options and ('--version' in options[0] or '-v' in options[0]):
+	print('0.3')
+	sys.exit(0)
+
+if options and ('--help' in options[0] or '-h' in options[0]):
+	print('usage: pocoy <command> [parameters]')
+	sys.exit(0)
+
+if options and ('--cache' in options[0] or '-c' in options[0]):
+	import pocoy.state
+	print(pocoy.state.display_file)
+	sys.exit(0)
+
+from pocoy import command
+CMDS = {
+	'zoom': command.zoom,
+	'apply': command.zoom,
+	'mfact': command.setmfact,
+	'incnmaster': command.incnmaster,
+	'focusstack': command.focusstack,
+	'pushstack': command.pushstack,
+	'layout': command.setlayout,
+	'gap': command.gap,
+	'decoration': command.decorate,
+	'list': command.print_state,
+}
+
+if arguments[0] not in CMDS:
+	print('unrecognized command: {}'.format(arguments))
+	sys.exit(1)
+
+function = CMDS[arguments[0]]
+
+function(arguments)

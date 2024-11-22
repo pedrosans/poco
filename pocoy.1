@@ -1,0 +1,48 @@
+.TH POCOY 1 2022-11-20 VERSION
+.SH NAME
+pocoy \- window management tool
+.SH SYNOPSIS
+pocoy
+.OP -v
+.OP -h
+.OP -c
+.SH DESCRIPTION
+pocoy is a window stack management tool to add tiling and navigation features from dwm to the DE of choice
+.SH OPTIONS
+.TP
+.B \-v
+print version
+.TP
+.B \-h
+print help message
+.TP
+.B \-c
+print internal state file path
+.SH COMMANDS
+.TP
+.B zoom
+Toogle selected and master window positions
+.TP
+.B layout [none|last|M|T|C|c|@|D|F]
+Set a layout: monocle M, tile T, centeredmaster C, centeredfloatingmaster c, spiral @, dwindle D, flow F
+.TP
+.B mfact <increment>
+Increase/decrease master area size
+.TP
+.B pushstack <number>
+Push active window x positions in the stack
+.TP
+.B focusstack <number>
+Focus the window x positions up or down in the stack
+.TP
+.B incnmaster <increment>
+Increment/decrement the number of windows in the master area
+.TP
+.B gap inner <number>
+Add a number of pixels around each window
+.TP
+.B gap outer <number>
+Add a number of pixels around the layout area
+.TP
+.B decoration toogle
+Toogle window decorations on and offf
