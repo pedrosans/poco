@@ -1,4 +1,4 @@
-CLI to execute dwm's X window stack management ideas as commands that can be executed in a DE
+CLI to execute dwm's X window stack management ideas as commands in a DE
 
 ### layouts
 
@@ -15,7 +15,7 @@ pocoy focusstack <number>
 pocoy pushstack <number>
 pocoy gap inner <number>
 pocoy gap outer <number>
-pocoy decoration toogle
+pocoy decoration toggle
 ```
 
 manual: [pocoy.1.txt](pocoy.1.txt)

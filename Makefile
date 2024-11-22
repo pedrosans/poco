@@ -1,6 +1,6 @@
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 current_dir := $(patsubst %/,%,$(dir $(mkfile_path)))
-VERSION=0.4.7
+VERSION=1.0.0
 WORKSPACE=$(current_dir)
 SETUP_SCRIPT=${WORKSPACE}/setup.py
 

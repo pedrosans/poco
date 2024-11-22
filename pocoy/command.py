@@ -75,7 +75,7 @@ def setlayout(argv):
 	monitor = root.selected_monitor
 	symbols = list(map(lambda i: '><>' if argv[i] == 'none' else monitor.last_lt if argv[i] == 'last' else '[%s]' % (argv[i]), range(1, len(argv))))
 
-	monitor.set_layout(symbols[0] if symbols else monitor.lt) if len(symbols) < 2 else monitor.toogle(symbols)
+	monitor.set_layout(symbols[0] if symbols else monitor.lt) if len(symbols) < 2 else monitor.toggle(symbols)
 	monitor.arrange()
 	root.apply_decoration_config()
 
@@ -96,7 +96,7 @@ def gap(argv):
 @gtk(persist=True)
 def decorate(argv):
 	arg = argv[1].lower().strip()
-	state.set_remove_decorations(not state.is_remove_decorations() if arg == 'toogle' else arg == 'remove')
+	state.set_remove_decorations(not state.is_remove_decorations() if arg == 'toggle' else arg == 'remove')
 	root.apply_decoration_config()
 
 

@@ -3,7 +3,7 @@ POCOY(1)                    General Commands Manual                   POCOY(1)
 
 
 NAME
-       pocoy - window management tool
+       pocoy - window tiling tool
 
 SYNOPSIS
        pocoy [-v] [-h] [-c]
@@ -20,7 +20,7 @@ OPTIONS
        -c     print internal state file path
 
 COMMANDS
-       zoom   Toogle selected and master window positions
+       zoom   Toggle selected and master window positions
 
        layout [none|last|M|T|C|c|@|D|F]
               Set a layout: monocle M, tile  T,  centeredmaster  C,  centered‐
@@ -44,9 +44,9 @@ COMMANDS
        gap outer <number>
               Add a number of pixels around the layout area
 
-       decoration toogle
-              Toogle window decorations on and offf
+       decoration toggle
+              Toggle window decorations on and off
 
 
 
-0.4.7                             2022-11-20                          POCOY(1)
+1.0.0                             2022-11-20                          POCOY(1)

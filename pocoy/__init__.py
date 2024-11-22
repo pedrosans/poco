@@ -23,7 +23,7 @@ class Monitor:
 	def is_available(self):
 		return not wm.is_workspaces_only_on_primary() or self.primary or self.workspace == 0
 	
-	def toogle(self, options):
+	def toggle(self, options):
 		self.set_layout(options[(options.index(self.lt) + 1) % len(options)] if self.lt in options else options[0])
 
 	def set_layout(self, new_key):
